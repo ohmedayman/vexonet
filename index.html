@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vexonet شركة برمجيات مصرية من الفيوم متخصصة في بناء المنتجات الرقمية المبتكرة. منتجنا QCV للتحقق من الشهادات والاعتمادات.">
-    <meta name="keywords" content="Vexonet, شركة برمجيات, الفيوم, QCV, منتجات رقمية, تطوير برمجيات, مصر">
-    <meta name="author" content="Vexonet">
+    <meta name="description" content="Vexonet شركة برمجيات مصرية من الفيوم. نبني منتجات رقمية مبتكرة مثل QCV للتحقق من الشهادات.">
+    <meta name="keywords" content="Vexonet, شركة برمجيات, الفيوم, QCV, تطوير برمجيات, مصر">
     <meta name="theme-color" content="#0f172a">
     <title>Vexonet | شركة برمجيات من الفيوم</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="nav">
+    <nav class="nav" id="nav">
         <div class="container nav-inner">
             <a href="#" class="logo">
                 <span class="logo-icon">V</span>
@@ -38,14 +45,38 @@
 
     <!-- Hero -->
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-glow"></div>
+            <div class="hero-grid"></div>
+        </div>
         <div class="container">
-            <div class="hero-content">
-                <span class="tag">شركة برمجيات مصرية</span>
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    شركة برمجيات مصرية
+                </div>
                 <h1>نبني منتجات رقمية<br><span>تفرق في حياة الناس</span></h1>
-                <p>Vexonet شركة برمجيات من الفيوم، مصر. بناء منتجات رقمية مبتكرة تساعد الشركات والأفراد على النمو والتطور.</p>
+                <p>Vexonet شركة برمجيات من الفيوم، مصر. نبني منتجات رقمية مبتكرة تساعد الشركات والأفراد على النمو والتطور.</p>
                 <div class="hero-btns">
-                    <a href="#products" class="btn primary">اكتشف منتجاتنا</a>
+                    <a href="#products" class="btn primary">
+                        اكتشف منتجاتنا
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                     <a href="#contact" class="btn outline">تواصل معنا</a>
+                </div>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                    <div class="hero-stat">
+                        <i class="fas fa-rocket"></i>
+                        <span>50+ مشروع</span>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-users"></i>
+                        <span>30+ عميل</span>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-clock"></i>
+                        <span>5+ سنوات</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,30 +86,30 @@
     <section id="about" class="about section">
         <div class="container">
             <div class="about-grid">
-                <div class="about-text">
-                    <span class="tag">عن Vexonet</span>
+                <div class="about-content" data-aos="fade-right" data-aos-duration="800">
+                    <div class="section-tag">عن Vexonet</div>
                     <h2>شركة برمجيات من قلب الفيوم</h2>
-                    <p>نحن فريق من المطورين والمصممين في الفيوم، مصر. نحب ما نعمله ونؤمن بأن التكنولوجيا|`
-                        <br><br>
-                        نبدأ من هنا، من الفيوم، ونبني منتجات تصل للعالم كله.</p>
-                    <div class="stats">
+                    <p class="lead">نحن فريق من المطورين والمصممين في الفيوم، مصر. نحب ما نعمله ونؤمن بأن التكنولوجيا المميزة تبدأ من هنا.</p>
+                    <p>نبدأ من هنا، من الفيوم، ونبني منتجات تصل للعالم كله. نهتم بالجودة والتفاصيل ونحب نبني أشياء تفرق.</p>
+                    <div class="about-stats">
                         <div class="stat">
-                            <strong>50+</strong>
-                            <span>مشروع</span>
+                            <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">مشروع ناجح</span>
                         </div>
                         <div class="stat">
-                            <strong>30+</strong>
-                            <span>عميل</span>
+                            <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">عميل سعيد</span>
                         </div>
                         <div class="stat">
-                            <strong>5+</strong>
-                            <span>سنوات</span>
+                            <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">سنوات خبرة</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-visual">
+                <div class="about-visual" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     <div class="visual-box">
-                        <i class="fas fa-code"></i>
+                        <div class="visual-icon"><i class="fas fa-code"></i></div>
+                        <div class="visual-dots"></div>
                     </div>
                 </div>
             </div>
@@ -88,29 +119,70 @@
     <!-- Products -->
     <section id="products" class="products section">
         <div class="container">
-            <div class="section-header">
-                <span class="tag">المنتجات</span>
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <div class="section-tag">المنتجات</div>
                 <h2>منتجاتنا الرقمية</h2>
-                <p>نطور منتجات رقمية حل مشاكل حقيقية</p>
+                <p>نطور منتجات رقمية تحل مشاكل حقيقية للشركات والأفراد</p>
             </div>
-            <div class="products-grid">
-                <!-- QCV -->
-                <div class="product-card featured">
-                    <div class="product-badge">المنتج الرئيسي</div>
+            <div class="product-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="product-badge">
+                    <i class="fas fa-star"></i>
+                    المنتج الرئيسي
+                </div>
+                <div class="product-content">
                     <div class="product-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
-                    <h3>QCV</h3>
-                    <p> Qualified Credential Verification — منصة ذكية للتحقق من الشهادات والاعتمادات المهنية. تحقق فوري وأمن من صحة أي شهادة.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> تحقق بالذكاء الاصطناعي</li>
-                        <li><i class="fas fa-check"></i> نتائج فورية</li>
-                        <li><i class="fas fa-check"></i> أمان عالي</li>
-                        <li><i class="fas fa-check"></i> سهل الاستخدام</li>
-                    </ul>
-                    <a href="https://qcv.vexonet.online/" target="_blank" class="btn primary">
-                        جرب الآن <i class="fas fa-arrow-left"></i>
-                    </a>
+                    <div class="product-info">
+                        <h3>QCV</h3>
+                        <p class="product-subtitle">Qualified Credential Verification</p>
+                        <p class="product-desc">منصة ذكية للتحقق من الشهادات والاعتمادات المهنية. تحقق فوري وأمن من صحة أي شهادة باستخدام الذكاء الاصطناعي.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check-circle"></i> تحقق بالذكاء الاصطناعي</li>
+                            <li><i class="fas fa-check-circle"></i> نتائج فورية في ثوانٍ</li>
+                            <li><i class="fas fa-check-circle"></i> أمان وخصوصية عالية</li>
+                            <li><i class="fas fa-check-circle"></i> سهل الاستخدام</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="https://qcv.vexonet.online/" target="_blank" class="btn primary">
+                                جرب QCV الآن
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                            <a href="#contact" class="btn outline">اعرف أكتر</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <div class="section-tag">ليه Vexonet؟</div>
+                <h2>ليه تختارنا</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+                    <div class="why-icon"><i class="fas fa-code"></i></div>
+                    <h3>تطوير احترافي</h3>
+                    <p>نستخدم أحدث التقنيات وأفضل الممارسات لبناء منتجات موثوقة وقابلة للتوسع.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="why-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>تصميم جذاب</h3>
+                    <p>نصمم واجهات جميلة وسهلة الاستخدام تخلي تجربة المستخدم مميزة.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h3>دعم مستمر</h3>
+                    <p>مفيش علاقة بتنتهي بعد التسليم. احنا معاك دايمًا في كل خطوة.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>أمان عالي</h3>
+                    <p>بنعتني بأمان بياناتك وخصوصيتك بأعلى المعايير العالمية.</p>
                 </div>
             </div>
         </div>
@@ -120,26 +192,35 @@
     <section id="contact" class="contact section">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="tag">تواصل معنا</span>
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="800">
+                    <div class="section-tag">تواصل معنا</div>
                     <h2>عندك مشروع؟<br>كلمنا</h2>
                     <p>سواء كنت عايز تعرف أكتر عن منتجاتنا أو عندك فكرة عايز تنفيذها، كلمنا و هنرد عليك في أقرب وقت.</p>
                     <div class="info-items">
                         <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>hello@vexonet.online</span>
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="info-label">البريد الإلكتروني</span>
+                                <span class="info-value">hello@vexonet.online</span>
+                            </div>
                         </div>
                         <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+20 123 456 7890</span>
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="info-label">الهاتف</span>
+                                <span class="info-value">+20 123 456 7890</span>
+                            </div>
                         </div>
                         <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>الفيوم، مصر</span>
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="info-label">العنوان</span>
+                                <span class="info-value">الفيوم، مصر</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="form">
+                <form class="contact-form" id="form" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     <div class="form-row">
                         <div class="form-group">
                             <label>الاسم</label>
@@ -153,8 +234,9 @@
                     <div class="form-group">
                         <label>الموضوع</label>
                         <select>
-                            <option value="">اختر</option>
-                            <option>استفسار عن منتج</option>
+                            <option value="">اختر الموضوع</option>
+                            <option>استفسار عن QCV</option>
+                            <option>استفسار عن منتج آخر</option>
                             <option>تطوير مخصص</option>
                             <option>شراكة</option>
                             <option>أخرى</option>
@@ -162,9 +244,12 @@
                     </div>
                     <div class="form-group">
                         <label>الرسالة</label>
-                        <textarea rows="4" placeholder="اكتب رسالتك..." required></textarea>
+                        <textarea rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
                     </div>
-                    <button type="submit" class="btn primary full">إرسال <i class="fas fa-paper-plane"></i></button>
+                    <button type="submit" class="btn primary full">
+                        إرسال الرسالة
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -172,34 +257,33 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <a href="#" class="logo">
-                    <span class="logo-icon">V</span>
-                    <span>Vexonet</span>
-                </a>
-                <p>شركة برمجيات من الفيوم، مصر.<br>نبني منتجات رقمية تفرق.</p>
-            </div>
-            <div class="footer-links">
-                <div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">V</span>
+                        <span>Vexonet</span>
+                    </a>
+                    <p>شركة برمجيات من الفيوم، مصر. بناء منتجات رقمية تفرق في حياة الناس.</p>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
                     <h4>المنتج</h4>
                     <a href="https://qcv.vexonet.online/" target="_blank">QCV</a>
+                    <a href="#products">المنتجات الأخرى</a>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h4>الشركة</h4>
                     <a href="#about">عن Vexonet</a>
                     <a href="#contact">تواصل معنا</a>
                 </div>
-                <div>
-                    <h4>تابعنا</h4>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
+            <div class="footer-bottom">
                 <p>&copy; 2024 Vexonet. كل الحقوق محفوظة.</p>
             </div>
         </div>
@@ -211,6 +295,8 @@
         تم الإرسال بنجاح!
     </div>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
