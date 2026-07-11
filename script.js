@@ -1,4 +1,4 @@
-// Vexonet — Enhanced
+// Vexonet
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach(c => counterObserver.observe(c));
 
-    // Form submission with Formspree
+    // Form submission
     const form = document.getElementById('contactForm');
     const toast = document.getElementById('toast');
 
@@ -97,17 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     form.reset();
                     setTimeout(() => toast.classList.remove('show'), 3000);
                 } else {
-                    response.json().then(data => {
-                        if (data.errors) {
-                            alert(data.errors.map(err => err.message).join('\n'));
-                        } else {
-                            alert('حدث خطأ. حاول مرة أخرى.');
-                        }
-                    });
+                    throw new Error('Form submission failed');
                 }
             })
             .catch(() => {
-                alert('حدث خطأ في الاتصال. حاول مرة أخرى.');
+                // Fallback: submit normally
+                form.submit();
             })
             .finally(() => {
                 btn.innerHTML = originalHTML;
