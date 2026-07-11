@@ -257,6 +257,28 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// ===== FAQ Accordion =====
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+        const faqItem = this.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            const icon = item.querySelector('.faq-icon i');
+            if (icon) icon.className = 'fas fa-plus';
+        });
+        
+        // Open clicked item if it was not active
+        if (!isActive) {
+            faqItem.classList.add('active');
+            const icon = faqItem.querySelector('.faq-icon i');
+            if (icon) icon.className = 'fas fa-minus';
+        }
+    });
+});
+
 // ===== Typed.js Effect (Optional) =====
 class TypeWriter {
     constructor(element, words, wait = 3000) {
