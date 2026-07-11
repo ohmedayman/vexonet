@@ -69,27 +69,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach(c => counterObserver.observe(c));
 
-    // Form
-    const form = document.getElementById('form');
+    // Form submission with Formspree
+    const form = document.getElementById('contactForm');
     const toast = document.getElementById('toast');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = form.querySelector('button[type="submit"]');
-        const original = btn.innerHTML;
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = form.querySelector('button[type="submit"]');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+            btn.disabled = true;
 
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
-        btn.disabled = true;
+            const formData = new FormData(form);
 
-        setTimeout(() => {
-            toast.classList.add('show');
-            form.reset();
-            btn.innerHTML = original;
-            btn.disabled = false;
-
-            setTimeout(() => toast.classList.remove('show'), 3000);
-        }, 1500);
-    });
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    toast.classList.add('show');
+                    form.reset();
+                    setTimeout(() => toast.classList.remove('show'), 3000);
+                } else {
+                    response.json().then(data => {
+                        if (data.errors) {
+                            alert(data.errors.map(err => err.message).join('\n'));
+                        } else {
+                            alert('حدث خطأ. حاول مرة أخرى.');
+                        }
+                    });
+                }
+            })
+            .catch(() => {
+                alert('حدث خطأ في الاتصال. حاول مرة أخرى.');
+            })
+            .finally(() => {
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+            });
+        });
+    }
 
     // Card tilt effect
     document.querySelectorAll('.product-card, .why-card').forEach(card => {
