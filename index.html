@@ -3,516 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Vexonet - شركة تكنولوجيا مصرية متخصصة في بناء المنتجات الرقمية المبتكرة. منتجاتنا تساعد الشركات والأفراد على النمو والتطور.">
-    <meta name="keywords" content="Vexonet, شركة تكنولوجيا, منتجات رقمية, QCV, حلول رقمية, شركة مصرية, تطوير برمجيات">
+    <meta name="description" content="Vexonet شركة برمجيات مصرية من الفيوم متخصصة في بناء المنتجات الرقمية المبتكرة. منتجنا QCV للتحقق من الشهادات والاعتمادات.">
+    <meta name="keywords" content="Vexonet, شركة برمجيات, الفيوم, QCV, منتجات رقمية, تطوير برمجيات, مصر">
     <meta name="author" content="Vexonet">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#000000">
-    <title>Vexonet | منتجات رقمية مبتكرة</title>
+    <meta name="theme-color" content="#0f172a">
+    <title>Vexonet | شركة برمجيات من الفيوم</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navbar -->
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
+    <nav class="nav">
+        <div class="container nav-inner">
             <a href="#" class="logo">
-                <span class="logo-mark">V</span>
-                <span class="logo-text">Vexonet</span>
+                <span class="logo-icon">V</span>
+                <span>Vexonet</span>
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <div class="links" id="links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">عن الشركة</a>
+                <a href="#products">المنتجات</a>
+                <a href="#contact">تواصل معنا</a>
             </div>
-            <div class="nav-actions">
-                <a href="#contact" class="btn-nav">Get Started</a>
-                <button class="menu-btn" id="menuBtn" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <a href="#contact" class="nav-btn">تواصل معنا</a>
+            <button class="toggle" id="toggle">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-bg">
-            <div class="grid-pattern"></div>
-            <div class="glow glow-1"></div>
-            <div class="glow glow-2"></div>
-        </div>
+    <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge" data-reveal>
-                    <span class="badge-dot"></span>
-                    Building the future of digital products
-                </div>
-                <h1 class="hero-title" data-reveal>
-                    We build <span class="text-gradient">digital products</span> that matter.
-                </h1>
-                <p class="hero-desc" data-reveal>
-                    Vexonet is an Egyptian technology company crafting innovative digital solutions. We turn ideas into products that scale.
-                </p>
-                <div class="hero-ctas" data-reveal>
-                    <a href="#products" class="btn btn-primary">
-                        View Products
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-ghost">
-                        Talk to us
-                    </a>
-                </div>
-                <div class="hero-proof" data-reveal>
-                    <div class="proof-avatars">
-                        <div class="avatar" style="background: #6c5ce7;">A</div>
-                        <div class="avatar" style="background: #00cec9;">S</div>
-                        <div class="avatar" style="background: #fd79a8;">M</div>
-                        <div class="avatar" style="background: #fdcb6e;">R</div>
-                    </div>
-                    <div class="proof-text">
-                        <strong>50+</strong> projects delivered
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Logos -->
-    <section class="logos-section">
-        <div class="container">
-            <p class="logos-label" data-reveal>Trusted by forward-thinking companies</p>
-            <div class="logos-track" data-reveal>
-                <div class="logo-item">
-                    <i class="fas fa-building"></i>
-                    <span>Al-Ahram</span>
-                </div>
-                <div class="logo-item">
-                    <i class="fas fa-industry"></i>
-                    <span>Egyptian Industries</span>
-                </div>
-                <div class="logo-item">
-                    <i class="fas fa-university"></i>
-                    <span>National Bank</span>
-                </div>
-                <div class="logo-item">
-                    <i class="fas fa-hospital"></i>
-                    <span>Nile Hospital</span>
-                </div>
-                <div class="logo-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Cairo University</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products -->
-    <section class="section products" id="products">
-        <div class="container">
-            <div class="section-header" data-reveal>
-                <span class="section-tag">Products</span>
-                <h2 class="section-title">Built to solve real problems</h2>
-                <p class="section-desc">
-                    Each product is crafted with precision, designed for scale, and built to last.
-                </p>
-            </div>
-
-            <div class="products-grid">
-                <!-- QCV -->
-                <div class="product-card product-featured" data-reveal>
-                    <div class="product-badge">Flagship</div>
-                    <div class="product-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3 class="product-name">QCV</h3>
-                    <p class="product-desc">
-                        Qualified Credential Verification — a smart platform for verifying and managing professional certifications. Streamline your verification process with AI-powered validation.
-                    </p>
-                    <ul class="product-features">
-                        <li>
-                            <i class="fas fa-check"></i>
-                            AI-powered verification engine
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Real-time credential validation
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Secure document management
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            API integration support
-                        </li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="#contact" class="btn btn-primary btn-sm">
-                            Learn more
-                            <i class="fas fa-arrow-left"></i>
-                        </a>
-                        <span class="product-status">
-                            <span class="status-dot"></span>
-                            Available now
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product-card" data-reveal>
-                    <div class="product-icon" style="background: linear-gradient(135deg, #00cec9, #55efc4);">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="product-name">Analytics Dashboard</h3>
-                    <p class="product-desc">
-                        Real-time business intelligence. Track metrics, identify trends, and make data-driven decisions with our beautiful dashboard.
-                    </p>
-                    <ul class="product-features">
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Real-time data visualization
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Custom report builder
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Team collaboration tools
-                        </li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="#contact" class="btn btn-outline btn-sm">Learn more</a>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card" data-reveal>
-                    <div class="product-icon" style="background: linear-gradient(135deg, #fd79a8, #e84393);">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3 class="product-name">E-Commerce Platform</h3>
-                    <p class="product-desc">
-                        Everything you need to sell online. From inventory management to secure payments — a complete commerce solution.
-                    </p>
-                    <ul class="product-features">
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Secure payment gateway
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Inventory management
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Mobile-responsive storefront
-                        </li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="#contact" class="btn btn-outline btn-sm">Learn more</a>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card" data-reveal>
-                    <div class="product-icon" style="background: linear-gradient(135deg, #fdcb6e, #f39c12);">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="product-name">Learning Platform</h3>
-                    <p class="product-desc">
-                        Deliver engaging educational experiences. Live sessions, interactive quizzes, and certificate management — all in one place.
-                    </p>
-                    <ul class="product-features">
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Live streaming & recordings
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Interactive assessments
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Digital certificates
-                        </li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="#contact" class="btn btn-outline btn-sm">Learn more</a>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product-card" data-reveal>
-                    <div class="product-icon" style="background: linear-gradient(135deg, #74b9ff, #0984e3);">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="product-name">Task Manager</h3>
-                    <p class="product-desc">
-                        Organize work, track progress, and boost productivity. A beautiful task management app for teams of all sizes.
-                    </p>
-                    <ul class="product-features">
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Kanban boards & lists
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Team assignments
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            Progress tracking
-                        </li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="#contact" class="btn btn-outline btn-sm">Learn more</a>
-                    </div>
+                <span class="tag">شركة برمجيات مصرية</span>
+                <h1>نبني منتجات رقمية<br><span>تفرق في حياة الناس</span></h1>
+                <p>Vexonet شركة برمجيات من الفيوم، مصر. بناء منتجات رقمية مبتكرة تساعد الشركات والأفراد على النمو والتطور.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn primary">اكتشف منتجاتنا</a>
+                    <a href="#contact" class="btn outline">تواصل معنا</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section class="section about" id="about">
+    <section id="about" class="about section">
         <div class="container">
             <div class="about-grid">
-                <div class="about-content" data-reveal>
-                    <span class="section-tag">About us</span>
-                    <h2 class="section-title">Egyptian innovation,<br>global standards.</h2>
-                    <p class="about-text">
-                        We're a team of engineers, designers, and product thinkers based in Fayoum, Egypt. We believe great technology should be accessible to everyone.
-                    </p>
-                    <p class="about-text">
-                        Our mission: build digital products that solve real problems, designed with care, engineered for scale.
-                    </p>
-                    <div class="about-stats">
+                <div class="about-text">
+                    <span class="tag">عن Vexonet</span>
+                    <h2>شركة برمجيات من قلب الفيوم</h2>
+                    <p>نحن فريق من المطورين والمصممين في الفيوم، مصر. نحب ما نعمله ونؤمن بأن التكنولوجيا|`
+                        <br><br>
+                        نبدأ من هنا، من الفيوم، ونبني منتجات تصل للعالم كله.</p>
+                    <div class="stats">
                         <div class="stat">
-                            <span class="stat-num">50+</span>
-                            <span class="stat-label">Projects</span>
+                            <strong>50+</strong>
+                            <span>مشروع</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-num">30+</span>
-                            <span class="stat-label">Clients</span>
+                            <strong>30+</strong>
+                            <span>عميل</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-num">5+</span>
-                            <span class="stat-label">Years</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">100%</span>
-                            <span class="stat-label">Remote</span>
+                            <strong>5+</strong>
+                            <span>سنوات</span>
                         </div>
                     </div>
                 </div>
-                <div class="about-visual" data-reveal>
-                    <div class="visual-grid">
-                        <div class="visual-card vc-1">
-                            <i class="fas fa-code"></i>
-                            <span>Engineering</span>
-                        </div>
-                        <div class="visual-card vc-2">
-                            <i class="fas fa-palette"></i>
-                            <span>Design</span>
-                        </div>
-                        <div class="visual-card vc-3">
-                            <i class="fas fa-rocket"></i>
-                            <span>Scale</span>
-                        </div>
-                        <div class="visual-card vc-4">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Security</span>
-                        </div>
+                <div class="about-visual">
+                    <div class="visual-box">
+                        <i class="fas fa-code"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section testimonials">
+    <!-- Products -->
+    <section id="products" class="products section">
         <div class="container">
-            <div class="section-header" data-reveal>
-                <span class="section-tag">Testimonials</span>
-                <h2 class="section-title">What our clients say</h2>
+            <div class="section-header">
+                <span class="tag">المنتجات</span>
+                <h2>منتجاتنا الرقمية</h2>
+                <p>نطور منتجات رقمية حل مشاكل حقيقية</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card" data-reveal>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <div class="products-grid">
+                <!-- QCV -->
+                <div class="product-card featured">
+                    <div class="product-badge">المنتج الرئيسي</div>
+                    <div class="product-icon">
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <p class="testimonial-text">
-                        "Vexonet delivered exactly what we needed. The QCV platform transformed how we handle credential verification. Professional team, excellent communication."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background: #6c5ce7;">A</div>
-                        <div>
-                            <strong>Ahmed Hassan</strong>
-                            <span>CTO, Al-Ahram Group</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card" data-reveal>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "The e-commerce platform they built handles thousands of orders daily. Reliable, fast, and beautifully designed. Couldn't ask for more."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background: #00cec9;">S</div>
-                        <div>
-                            <strong>Sara Ali</strong>
-                            <span>Founder, ShopEgypt</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card" data-reveal>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Working with Vexonet was a game-changer. They understood our vision and built a product that exceeded our expectations. Highly recommend."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background: #fd79a8;">M</div>
-                        <div>
-                            <strong>Mohamed Khaled</strong>
-                            <span>CEO, TechStart</span>
-                        </div>
-                    </div>
+                    <h3>QCV</h3>
+                    <p> Qualified Credential Verification — منصة ذكية للتحقق من الشهادات والاعتمادات المهنية. تحقق فوري وأمن من صحة أي شهادة.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> تحقق بالذكاء الاصطناعي</li>
+                        <li><i class="fas fa-check"></i> نتائج فورية</li>
+                        <li><i class="fas fa-check"></i> أمان عالي</li>
+                        <li><i class="fas fa-check"></i> سهل الاستخدام</li>
+                    </ul>
+                    <a href="https://qcv.vexonet.online/" target="_blank" class="btn primary">
+                        جرب الآن <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section class="section contact" id="contact">
+    <section id="contact" class="contact section">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info" data-reveal>
-                    <span class="section-tag">Contact</span>
-                    <h2 class="section-title">Let's build something great together.</h2>
-                    <p class="contact-desc">
-                        Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you within 24 hours.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
+                <div class="contact-info">
+                    <span class="tag">تواصل معنا</span>
+                    <h2>عندك مشروع؟<br>كلمنا</h2>
+                    <p>سواء كنت عايز تعرف أكتر عن منتجاتنا أو عندك فكرة عايز تنفيذها، كلمنا و هنرد عليك في أقرب وقت.</p>
+                    <div class="info-items">
+                        <div class="info-item">
                             <i class="fas fa-envelope"></i>
                             <span>hello@vexonet.online</span>
                         </div>
-                        <div class="contact-item">
+                        <div class="info-item">
                             <i class="fas fa-phone"></i>
                             <span>+20 123 456 7890</span>
                         </div>
-                        <div class="contact-item">
+                        <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Fayoum, Egypt</span>
+                            <span>الفيوم، مصر</span>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+                <form class="contact-form" id="form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>الاسم</label>
+                            <input type="text" placeholder="اسمك" required>
+                        </div>
+                        <div class="form-group">
+                            <label>البريد</label>
+                            <input type="email" placeholder="email@example.com" required>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-form-wrap" data-reveal>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" placeholder="Your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="you@company.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject">
-                                <option value="">What can we help with?</option>
-                                <option value="product">Product inquiry</option>
-                                <option value="custom">Custom development</option>
-                                <option value="partnership">Partnership</option>
-                                <option value="support">Support</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="4" placeholder="Tell us about your project..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            Send message
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <label>الموضوع</label>
+                        <select>
+                            <option value="">اختر</option>
+                            <option>استفسار عن منتج</option>
+                            <option>تطوير مخصص</option>
+                            <option>شراكة</option>
+                            <option>أخرى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>الرسالة</label>
+                        <textarea rows="4" placeholder="اكتب رسالتك..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary full">إرسال <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <span class="logo-mark">V</span>
-                        <span class="logo-text">Vexonet</span>
-                    </a>
-                    <p>Digital products that matter. Built in Egypt, designed for the world.</p>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">V</span>
+                    <span>Vexonet</span>
+                </a>
+                <p>شركة برمجيات من الفيوم، مصر.<br>نبني منتجات رقمية تفرق.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>المنتج</h4>
+                    <a href="https://qcv.vexonet.online/" target="_blank">QCV</a>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>Product</h4>
-                        <a href="#products">QCV</a>
-                        <a href="#products">Analytics</a>
-                        <a href="#products">E-Commerce</a>
-                        <a href="#products">Learning</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Blog</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Connect</h4>
-                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                        <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                    </div>
+                <div>
+                    <h4>الشركة</h4>
+                    <a href="#about">عن Vexonet</a>
+                    <a href="#contact">تواصل معنا</a>
+                </div>
+                <div>
+                    <h4>تابعنا</h4>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Vexonet. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Vexonet. كل الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -520,7 +208,7 @@
     <!-- Toast -->
     <div class="toast" id="toast">
         <i class="fas fa-check-circle"></i>
-        <span>Message sent successfully!</span>
+        تم الإرسال بنجاح!
     </div>
 
     <script src="script.js"></script>
