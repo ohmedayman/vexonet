@@ -1,4 +1,4 @@
-// Vexonet
+// Vexonet — Premium
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS
@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const el = entry.target;
-                const target = parseInt(el.getAttribute('data-count'));
+                const target = parseInt(el.textContent);
+                if (isNaN(target)) return;
+                
                 const duration = 2000;
                 const step = target / (duration / 16);
                 let current = 0;
@@ -87,9 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fetch(form.action, {
                 method: 'POST',
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             })
             .then(response => {
                 if (response.ok) {
@@ -97,13 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     form.reset();
                     setTimeout(() => toast.classList.remove('show'), 3000);
                 } else {
-                    throw new Error('Form submission failed');
+                    throw new Error('Failed');
                 }
             })
-            .catch(() => {
-                // Fallback: submit normally
-                form.submit();
-            })
+            .catch(() => form.submit())
             .finally(() => {
                 btn.innerHTML = originalHTML;
                 btn.disabled = false;
@@ -111,22 +108,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Card tilt effect
-    document.querySelectorAll('.product-card, .why-card').forEach(card => {
+    // Tilt effect on cards
+    document.querySelectorAll('.service-card, .why-card, .testimonial-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 25;
-            const rotateY = (centerX - x) / 25;
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
         });
 
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
+    });
+
+    // Parallax on hero
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero-content');
+        if (hero && scrolled < window.innerHeight) {
+            hero.style.transform = `translateY(${scrolled * 0.1}px)`;
+            hero.style.opacity = 1 - (scrolled * 0.001);
+        }
     });
 });
