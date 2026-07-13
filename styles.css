@@ -123,7 +123,7 @@ body {
 }
 
 .logo-img {
-    height: 42px;
+    height: 50px;
     width: auto;
     transition: transform 0.3s;
 }
@@ -198,8 +198,33 @@ body {
     justify-content: center;
     position: relative;
     padding-top: 72px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #eef2ff 100%);
+    background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
     text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .hero-content {
@@ -236,16 +261,18 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(36px, 6vw, 58px);
+    font-size: clamp(36px, 6vw, 64px);
     font-weight: 900;
-    line-height: 1.15;
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
     color: var(--text);
 }
 
 .hero h1 span {
     color: var(--primary);
+    position: relative;
+    display: inline-block;
 }
 
 .hero p {
@@ -951,4 +978,244 @@ body {
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     
     .hero h1 { font-size: 32px; }
+}
+
+/* ========================================
+   Services
+   ======================================== */
+
+.services {
+    background: var(--bg);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: var(--shadow);
+}
+
+.service-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--primary-light);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--primary);
+    margin: 0 auto 20px;
+}
+
+.service-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.service-card p {
+    color: var(--text2);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   Testimonials
+   ======================================== */
+
+.testimonials {
+    background: var(--bg2);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: all 0.3s;
+    box-shadow: var(--shadow);
+}
+
+.testimonial-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    color: #f59e0b;
+    font-size: 14px;
+}
+
+.testimonial-text {
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.testimonial-author strong {
+    display: block;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.testimonial-author span {
+    font-size: 12px;
+    color: var(--text3);
+}
+
+/* ========================================
+   CTA
+   ======================================== */
+
+.cta {
+    background: var(--bg);
+    padding: 80px 0;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, var(--primary), #7c3aed);
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.cta-box h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    margin-bottom: 28px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-cta {
+    background: #fff;
+    color: var(--primary);
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.info-value {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.info-value:hover {
+    color: var(--primary);
+}
+
+/* ========================================
+   Responsive Updates
+   ======================================== */
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-box {
+        padding: 40px 24px;
+    }
+    
+    .cta-box h2 {
+        font-size: 24px;
+    }
 }
