@@ -1,12 +1,12 @@
 # Robots.txt for Vexonet
-# https://www.vexonet.online
+# https://ohmedayman.github.io/vexonet/
 
 # Allow all robots
 User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://www.vexonet.online/sitemap.xml
+Sitemap: https://ohmedayman.github.io/vexonet/sitemap.xml
 
 # Crawl-delay
 User-agent: *
