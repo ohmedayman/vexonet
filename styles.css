@@ -1253,16 +1253,12 @@ a {
     margin-bottom: 24px;
 }
 
-.client-logo .logo-placeholder {
+.client-logo-img {
     width: 72px;
     height: 72px;
     border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 32px;
-    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .client-details h3 {
@@ -1275,6 +1271,30 @@ a {
 .client-type {
     color: var(--text-muted);
     font-size: 14px;
+}
+
+.solution-icon-img {
+    width: 56px;
+    height: 56px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    overflow: hidden;
+}
+
+.solution-icon-img img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.solution-icon-img i {
+    font-size: 22px;
+    color: var(--primary);
 }
 
 .featured-description {
