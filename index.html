@@ -46,7 +46,12 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://i.postimg.cc/MZ5Wg350/vexonet-logo-clean-v1.png" as="image">
     
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -306,6 +311,9 @@
 </head>
 <body>
 
+    <!-- Skip to Content -->
+    <a href="#main" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
     <!-- Navbar -->
     <nav class="nav" id="nav">
         <div class="container nav-inner">
@@ -326,6 +334,8 @@
             </button>
         </div>
     </nav>
+
+    <main id="main">
 
     <!-- Hero -->
     <section id="home" class="hero">
@@ -457,7 +467,7 @@
                 <div class="product-card-v2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="product-header-v2">
                         <div class="product-icon-v2" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);">
-                            <img src="https://i.postimg.cc/L59BQSvq/qcv-app-icon-final.png" alt="QCV">
+                            <img src="https://i.postimg.cc/L59BQSvq/qcv-app-icon-final.png" alt="QCV" loading="lazy">
                         </div>
                         <span class="product-tag-v2">المنتج الرئيسي</span>
                     </div>
@@ -537,7 +547,7 @@
                 <div class="featured-content">
                     <div class="featured-info">
                         <div class="client-logo">
-                            <img src="https://assets.wuiltstore.com/cmksv9bcw0ki601gn64lf4joy_Gemini_Generated_Image_8x0fug8x0fug8x0f.webp" alt="ميلانو" class="client-logo-img">
+                            <img src="https://assets.wuiltstore.com/cmksv9bcw0ki601gn64lf4joy_Gemini_Generated_Image_8x0fug8x0fug8x0f.webp" alt="ميلانو" class="client-logo-img" loading="lazy">
                         </div>
                         <div class="client-details">
                             <h3>شركة ميلانو للمبيدات الحشرية</h3>
@@ -825,13 +835,15 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="https://i.postimg.cc/MZ5Wg350/vexonet-logo-clean-v1.png" alt="Vexonet" class="logo-img">
+                <img src="https://i.postimg.cc/MZ5Wg350/vexonet-logo-clean-v1.png" alt="Vexonet" class="logo-img" loading="eager" fetchpriority="high">
                     </a>
                     <p>Vexonet شركة برمجيات من الفيوم، مصر. نقدم خدمات تطوير المواقع والتطبيقات والحلول الرقمية.</p>
                     <div class="social">
@@ -874,6 +886,11 @@
     <a href="https://wa.me/201551278606" target="_blank" class="whatsapp-float" aria-label="تواصل معنا عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Toast -->
     <div class="toast" id="toast">

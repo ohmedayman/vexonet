@@ -1303,6 +1303,66 @@ a {
 }
 
 /* ========================================
+   Back to Top
+   ======================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    left: 32px;
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--primary-hover);
+    transform: translateY(-4px);
+}
+
+/* ========================================
+   Skip Link
+   ======================================== */
+
+.skip-link {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 0 0 12px 12px;
+    font-weight: 700;
+    z-index: 10000;
+    transition: var(--transition);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ========================================
    Projects
    ======================================== */
 

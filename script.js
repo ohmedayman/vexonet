@@ -184,4 +184,20 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
         toggle.classList.toggle('active');
     });
+
+    // Back to Top
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
