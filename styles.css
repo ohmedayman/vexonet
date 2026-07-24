@@ -610,6 +610,12 @@ a {
     background: var(--bg);
 }
 
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+}
+
 .product-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -618,8 +624,6 @@ a {
     position: relative;
     overflow: hidden;
     transition: var(--transition);
-    max-width: 850px;
-    margin: 0 auto;
     box-shadow: var(--shadow-sm);
 }
 
