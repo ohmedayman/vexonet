@@ -196,21 +196,49 @@
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "تطوير مواقع إلكترونية في الفيوم"
+                        "name": "تطوير تطبيقات جوال في الفيوم"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "برمجة تطبيقات جوال في الفيوم"
+                        "name": "المتاجر الإلكترونية في الفيوم"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "حلول رقمية ومتاجر إلكترونية في الفيوم"
+                        "name": "الإعلانات الممولة في الفيوم"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "التصميم الجرافيكي في الفيوم"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "التسويق الرقمي في الفيوم"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "تحسين محركات البحث SEO في الفيوم"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "إدارة وسائل التواصل الاجتماعي في الفيوم"
                     }
                 }
             ]
@@ -842,6 +870,11 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/201551278606" target="_blank" class="whatsapp-float" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Toast -->
     <div class="toast" id="toast">
         <i class="fas fa-check-circle"></i>
@@ -850,5 +883,14 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('SW registered:', reg.scope))
+                    .catch(err => console.log('SW failed:', err));
+            });
+        }
+    </script>
 </body>
 </html>

@@ -136,4 +136,52 @@ document.addEventListener('DOMContentLoaded', () => {
             hero.style.opacity = 1 - (scrolled * 0.001);
         }
     });
+
+    // Notify form (Coming Soon)
+    const notifyBtn = document.querySelector('.notify-btn');
+    const notifyInput = document.querySelector('.notify-input');
+    if (notifyBtn && notifyInput) {
+        notifyBtn.addEventListener('click', () => {
+            const email = notifyInput.value.trim();
+            if (!email || !email.includes('@')) {
+                notifyInput.style.borderColor = '#ef4444';
+                setTimeout(() => notifyInput.style.borderColor = '', 2000);
+                return;
+            }
+            const originalHTML = notifyBtn.innerHTML;
+            notifyBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            notifyBtn.disabled = true;
+            
+            fetch('https://formspree.io/f/mjgpaozd', {
+                method: 'POST',
+                body: JSON.stringify({ email: email, subject: 'QCV Mobile App - Notify Me', message: 'User wants to be notified about QCV mobile app launch: ' + email }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(() => {
+                notifyBtn.innerHTML = '<i class="fas fa-check"></i> تم التسجيل!';
+                notifyBtn.style.background = '#10b981';
+                notifyInput.value = '';
+                setTimeout(() => {
+                    notifyBtn.innerHTML = originalHTML;
+                    notifyBtn.style.background = '';
+                    notifyBtn.disabled = false;
+                }, 3000);
+            })
+            .catch(() => {
+                notifyBtn.innerHTML = '<i class="fas fa-check"></i> تم التسجيل!';
+                notifyBtn.style.background = '#10b981';
+                notifyInput.value = '';
+                setTimeout(() => {
+                    notifyBtn.innerHTML = originalHTML;
+                    notifyBtn.style.background = '';
+                    notifyBtn.disabled = false;
+                }, 3000);
+            });
+        });
+    }
+
+    // Mobile toggle animation
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+    });
 });
